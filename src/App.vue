@@ -81,6 +81,8 @@ export default defineComponent({
 
       //Fourth Answer: 
       this.fourthAnswer = this.chunk(this.thirdAnswer)
+      //In order to be able to visually decode the text by stacking te chunks i would have to redefine the rectangle(s) method ...
+      //changing the way it iterates the string and having another criterion to split it
 
     },
     rectangle(string){
@@ -113,9 +115,6 @@ export default defineComponent({
     chunk(string){
       const x: number = Math.sqrt(string.length) 
       const int: number = Math.round(x)
-
-
-
       return this.rectangle(string)
     }
   }
